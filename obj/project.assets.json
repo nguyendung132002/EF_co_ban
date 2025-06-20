@@ -6521,11 +6521,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\EF_co_ban\\EF_co_ban\\Entity_framework_co_ban.csproj",
+      "projectUniqueName": "D:\\EF_co_ban\\Entity_framework_co_ban.csproj",
       "projectName": "Entity_framework_co_ban",
-      "projectPath": "D:\\EF_co_ban\\EF_co_ban\\Entity_framework_co_ban.csproj",
+      "projectPath": "D:\\EF_co_ban\\Entity_framework_co_ban.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\EF_co_ban\\EF_co_ban\\obj\\",
+      "outputPath": "D:\\EF_co_ban\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 24.2\\Components\\Offline Packages",

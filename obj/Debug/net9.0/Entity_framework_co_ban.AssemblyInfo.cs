@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Entity_framework_co_ban")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23d5058857b54264801d0cea3fe675c950a0884f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4264cf021c7931ab94c91132585b8b28b9b1606")]
 [assembly: System.Reflection.AssemblyProductAttribute("Entity_framework_co_ban")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Entity_framework_co_ban")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

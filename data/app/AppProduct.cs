@@ -16,32 +16,38 @@ public class App
     public async Task RunAsync()
     {
         await EnsureDatabaseCreatedAsync();
-        PrintMenu();
+        // PrintMenu();
 
-        var choice = Console.ReadLine()?.Trim().ToLower();
-        if (string.IsNullOrWhiteSpace(choice))
-        {
-            Console.WriteLine("❌ Bạn chưa nhập lựa chọn nào.");
-            return;
-        }
+        // var choice = Console.ReadLine()?.Trim().ToLower();
+        // if (string.IsNullOrWhiteSpace(choice))
+        // {
+        //     Console.WriteLine("❌ Bạn chưa nhập lựa chọn nào.");
+        //     return;
+        // }
 
-        if (choice == "huy") return;
+        // if (choice == "huy") return;
 
-        switch (choice)
-        {
-            case "1": await HandleInsertAsync(); break;
-            case "2": await ReadProductAsync(); break;
-            case "3": await HandleUpdateAsync(); break;
-            case "4": await HandleRemoveAsync(); break;
-            default: await PromptRetryAsync(); break;
-        }
+        // switch (choice)
+        // {
+        //     case "1": await HandleInsertAsync(); break;
+        //     case "2": await ReadProductAsync(); break;
+        //     case "3": await HandleUpdateAsync(); break;
+        //     case "4": await HandleRemoveAsync(); break;
+        //     default: await PromptRetryAsync(); break;
+        // }
     }
 
     private async Task EnsureDatabaseCreatedAsync()
     {
-        var created = await _context.Database.EnsureCreatedAsync();
-        if (created)
-            Console.WriteLine("✅ Cơ sở dữ liệu đã được tạo thành công!");
+            Console.WriteLine("Đang tạo cơ sở dữ liệu...");
+            if (await _context.Database.EnsureCreatedAsync())
+            {
+                Console.WriteLine("✅ Cơ sở dữ liệu đã được tạo thành công!");
+                return;
+            }
+            Console.WriteLine("Cơ sở dữ liệu đã tồn tại, đang áp dụng các migration nếu có...");
+            await _context.Database.MigrateAsync();
+            Console.WriteLine("✅ Cơ sở dữ liệu đã được cập nhật!");
     }
 
     private void PrintMenu()
